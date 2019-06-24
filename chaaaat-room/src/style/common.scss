@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+input {
+  border: none;
+  outline: none;
+}
+//类
+.btn_default {
+  color: #fff;
+  border: none;
+  border-radius: 1vw;
+}
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

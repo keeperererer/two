@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <title>hello</title>
+    <style>
+        .user {
+            color: #00a1f4;
+            cursor: pointer;
+        }
+        .content {
+            display: inline-block;
+            padding: 6px 10px;
+            background-color: #00a1f4;
+            border-radius: 8px;
+            color: #fff;
+        }
+        .panel-heading{
+            text-align: center;
+        }
+        .tips{
+            font-weight: 100;
+            color:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top: 30px;">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="text-center">快来跟沙雕网友聊天吧</h4>
+                        <span class="tips text-center">温馨提示：您的第一次输入内容为用户名哦</span>
+                        <div class="row">
+                            <div class="col-xs-6 text-center">
+                                <button id="join-A" class="btn btn-primary" onclick="join('A')">进入A群</button>
+                                <button id="leave-A" class="btn btn-primary" onclick="leave('A')" style="display: none;">离开A群</button>
+                            </div>
+                            <div class="col-xs-6 text-center">
+                                <button id="join-B" class="btn btn-success" onclick="join('B')">进入B群</button>
+                                <button id="leave-B" class="btn btn-success" onclick="leave('B')" style="display: none;">离开B群</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul id="list" class="list-group" style="height: 300px;overflow: auto;"></ul>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <input type="text" class="form-control" id="input">
+                            </div>
+                            <div class="col-xs-1" style="padding:0">
+                                <button class="btn btn-info" id="sendBtn">发送</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
